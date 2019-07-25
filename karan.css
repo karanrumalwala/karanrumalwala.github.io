@@ -14,6 +14,14 @@ body{
 	margin:auto;
 	/*font-size: 2vh;*/
 }
+
+.container{
+	display: grid;
+	grid-template-rows: min-content 70vh repeat(7, min-content);
+	grid-template-columns: [sidebar-start] minmax(min-content, 8rem) 
+	[sidebar-end full-start] 1fr [full-end email-start] 
+	minmax(min-content, 8rem) [email-end];
+}
 .nav__box{
 	opacity:50;
 	-webkit-animation:fade-in .5s .25s ease-in-out forwards;
@@ -24,15 +32,23 @@ body{
 }
 .nav {
 	display: flex;
-	flex-wrap: wrap;
+	justify-content: space-between;
+	grid-column: sidebar-start/email-end;
+	grid-column-start: sidebar-start;
+	grid-column-end: email-end;
+	align-items: center;
+	position: relative;
+	margin: auto 2rem;
+	padding: 2rem;
+
+/*	display:flex;
 	justify-content: space-between;
 	padding: 10px;
 	margin-right:20px;
 	margin-left: 20px;
 	align-items: center;
-	/*font-size: 1.3rem;*/
 	-webkit-transition:all .5s;
-	transition:all .5s;
+	transition:all .5s;*/
 }
 
 button{
@@ -58,7 +74,7 @@ button{
 	margin: auto;
 }
 .navigation{
-	display: flex;
+	display:inline-flex;
 	justify-content: center;
 	margin: 0px;
 	padding: 0px;
@@ -92,21 +108,7 @@ button{
 	margin: 10px;
 	align-items: center;
 }
-/*.email_sidebar{
-	display: flex;
-	flex-direction: column;
-	justify-content: flex-end;
-	height: 100%;
-  	width: 3rem;
-  	position:fixed;
-  	z-index: 1;
-  	top: 0;
-  	right: 0;
-  	align-items: center;
-  	margin: 10px;
-  	margin-bottom: -90px;
-}*/
-.email_sidebar{
+.email{
 	display: flex;
 	justify-content: flex-end;
 	height: 100%;
@@ -125,7 +127,7 @@ button{
 	text-decoration:none;
 	letter-spacing: .2rem;
 }
-.email_sidebar::after{
+.email::after{
 	content:"";
 	height: 12vh;
 	width: 1px;
@@ -150,22 +152,47 @@ button{
 }
 .nav__box--logo{
 	font-size:4rem;
-	font-family:"Josefin Sans", sans-serif;
+	font-family: 'PT Serif', serif;
 	-ms-flex-item-align:center;
 	margin-top:0px;
 	margin-bottom: 0px;
 }
-.headerclass{
-	grid-column-start: 1250px;
-	grid-column-end: 2368px;
+.header_text{
 	display: flex;
-	justify-content: center;
-	font-size: 5rem;
-	font-family: monospace;
+	flex-direction: column;
+	align-items: center;
+	font-family: 'PT Serif', serif;
+	letter-spacing: 0.5rem;
 }
-ol{
-	display: block;
+.header1{
+	grid-column: full-start/full-end;
+	grid-column-start: full-start;
+	grid-column-end: full-end;
+	position: static;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+    justify-content: center;
+    padding: 10px;
 }
+.allhead{
+	
+}
+h1 ,h3{
+	margin: 0px;
+}
+h1{
+	font-size: 3rem;
+}
+h3{
+	font-size: 1.2rem;
+}
+.allhead{
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
 @media only screen and (max-width: 961px) html{
 	font-size:50%;
 }
