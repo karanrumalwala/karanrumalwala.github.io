@@ -1,7 +1,7 @@
 *,*::before *::after{
 	margin:0px;
 	padding:0px;
-	-webkit-box-sizing:inherit;
+	/*-webkit-box-sizing:inherit;*/
 	box-sizing:inherit;
 }
 body{
@@ -42,6 +42,7 @@ body{
 	margin: auto 2rem;
 	padding: 1.7rem;
 }
+
 .image_ali1{
 	transform:scale(2.5,2.5);
 	width: 4em;
@@ -75,6 +76,24 @@ body{
 	align-self: center;
 }
 .lkicon{
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	width: 30px;
+	height:30px;
+	margin: 20px;
+	fill: #d6cab0;
+}
+.lkiconfill{
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	width: 30px;
+	height:30px;
+	margin: 20px;
+	fill: #6A601D;
+}
+.lkiconfillc{
 	display: flex;
 	align-items: center;
 	justify-content: center;
@@ -127,7 +146,6 @@ body{
 	background-color: #d6cab0;
 	margin: .5rem auto 0;
 }
-
 .nav__link{
 	text-decoration: none;
 	opacity: 100;
@@ -161,9 +179,7 @@ body{
     justify-content: center;
     padding: 10px;
 }
-.allhead{
-	
-}
+
 h1 ,h3{
 	margin: 0px;
 }

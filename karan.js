@@ -8,20 +8,60 @@
 // 	ul.appendChild(li);
 // })
 
-var button = document.getElementById("sys");
+// var button = document.getElementById("sys");
 // var body= document.getElementById("body1");
-var isColor=true;
+// var isColor=true;
 
-button.addEventListener("click",function(){
-	if (isColor) {
-		document.body.style.background ="white";
-		document.body.style.color ="black";
-		isColor=false;
-	}else{
-		document.body.style.background ="black";
-		document.body.style.color ="#d6cab0";
-		isColor=true;
-	}
-});
+// button.addEventListener("click",function(){
+// 	if (isColor) {
+// 		document.body.style.background ="white";
+// 		document.body.style.color ="black";
+// 		isColor=false;
+// 	}else{
+// 		document.body.style.background ="black";
+// 		document.body.style.color ="#d6cab0";
+// 		isColor=true;
+// 	}
+// });
 
+var items= document.getElementsByTagName('a');
+	var button = document.getElementById("sys");
+	var isColor=true;
+	var bordr= document.getElementById("bordrcolor");
+	var socialcolor0 = document.getElementsByClassName("lkicon")[0];
+	var socialcolor1 = document.getElementsByClassName("lkicon")[1];
+	var socialcolor2 = document.getElementsByClassName("lkicon")[2];
+	var socialcolor3 = document.getElementsByClassName("lkicon")[3];
+	// console.log(socialcolor);
+	button.addEventListener("click",ch);
 
+	function ch(){
+		
+		if (isColor) 
+		{
+			document.body.style.background ="white";
+			document.body.style.color ="#6A601D";
+		    for (var i =0;i< items.length; i++){
+	 	    items[i].style.color="#6A601D";}
+	 	    bordr.style.borderColor="#6A601D";
+	 	    socialcolor0.className="lkiconfill";
+	 	    socialcolor1.className="lkiconfill";
+	 	    socialcolor2.className="lkiconfill";
+	 	    socialcolor3.className="lkiconfill";
+ 		    isColor=false;
+		}
+			else
+		{
+ 		    document.body.style.background ="black";
+ 		    document.body.style.color ="#d6cab0";
+ 		    for (var i =0;i< items.length; i++){
+	 	    items[i].style.color="#d6cab0";}
+	 	    bordr.style.borderColor="#d6cab0";
+	 	    socialcolor0.className="lkiconfillc";
+	 	    socialcolor1.className="lkiconfillc";
+	 	    socialcolor2.className="lkiconfillc";
+	 	    socialcolor3.className="lkiconfillc";
+ 		    isColor=true;
+		}
+
+}
