@@ -6,14 +6,12 @@
 }
 body{
 	font-family: "Nunito",sans-serif;
-	/*background-color: #282726;*/
 	background-color: #000000;
 	color:#d6cab0;
 	font-weight:300;
 	line-height: 1.6;
 	scroll-behavior: smooth;
 	margin:auto;
-	/*font-size: 2vh;*/
 }
 
 .container{
@@ -31,7 +29,7 @@ body{
 .navigation--list{
 	margin:0px 2rem;
 }
-.nav {
+.nav ,.hamburger_button{
 	display: flex;
 	justify-content: space-between;
 	grid-column: sidebar-start/email-end;
@@ -39,8 +37,10 @@ body{
 	grid-column-end: email-end;
 	align-items: center;
 	position: relative;
-	margin: auto 2rem;
 	padding: 1.7rem;
+}
+.nav{
+	margin:auto 2rem;
 }
 
 .image_ali1{
@@ -48,7 +48,7 @@ body{
 	width: 4em;
 }
 .image_ali,.image_ali1{
-	display: flex;
+	display: inline-flex;
 	justify-content: center;
 	align-content: center;
 	align-items: center;
@@ -91,7 +91,7 @@ body{
 	width: 30px;
 	height:30px;
 	margin: 20px;
-	fill: #6A601D;
+	fill: #CD853F;
 }
 .lkiconfillc{
 	display: flex;
@@ -172,7 +172,7 @@ body{
 	grid-column: full-start/full-end;
 	grid-column-start: full-start;
 	grid-column-end: full-end;
-	position: static;
+	position: relative;
 	display: flex;
 	flex-direction: column;
 	align-items: center;
@@ -195,15 +195,100 @@ h3{
 	align-items: center;
 }
 
-@media only screen and (max-width: 961px) html{
-	font-size:50%;
-}
-@media only screen and (min-width: 400px){
-	font-size:50%;
-}
-@media only screen and (min-height: 1270px){
-	.email_sidebar{
+/*Mobile*/
+@media only screen and (min-width: 375px) and (max-width: 700px){
+	html{
+		width: 100%;
+		font-size: 50%;
+		}
+	.nav__box--logo{
+		font-size: 6rem;
+	}
+	.nav .hamburger_button{
+		display: flex;
+		justify-content: space-between;
+		position: relative;
+		padding: 1.7rem;
+		}	
+	.nav{
+		margin: 2rem;
+		font-size:;
+		}
+	.image_ali1 ,.image_ali2{
+		display: none;
+		}
+	.nav .hamburger_button{
+		background: transparent;
+		position: relative;
+		width: 4rem;
+		display: block;
+		border:none;
+	}
+	.hamburger_button1, .hamburger_button1:before ,.hamburger_button1:after{
+		width: 20px;
+     	height: 2px;
+      	display: block;
+      	background-color: #d6cab0;
+      	}
+	.hamburger_button1:after{
+		top: 2px;
+		right:-1px;
+		width: 80%;
+	}
+	.hamburger_button1:before{
+		bottom: 2px;
+		right: -1px;
+		width: 40%;
+	}
+	.hamburger_button1:after, .hamburger_button1:before{
+		display: block;
+		content:'';
+		position: absolute;
+	}
+	.nav .navigation{
+	display: none;
+	}
+	body{
+		line-height: 1;
+	}
+	.social_sidebar, .email{
+		display: none;
+	}
+	.header1{
+	grid-column: sidebar-start/email-end;
+	grid-column-start: sidebar-start;
+	grid-column-end: email-end;
+	}
+	h1{
+		font-size:4rem;
+	}
+	h3{
+		font-size: 2rem;
+	}
+	.head-name{
+		margin-bottom: 2rem;
+	}
+	.mobile{
 		position: fixed;
-
+		top: 0px;
+		right: 0px;
+		background-color: rgba(84, 80, 76, 0.9);
+		width: 80vw;
+		height: 100vh;
+		color: white;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		text-align: center;
+		/*transform: translateX(100%);*/
+		z-index:1;
+	}
+	.mobile_items{
+		font-size: 4em;
+	}
+	.contents{
+		counter-increment: item 1;
+		color: #d6cab0;
+		line-height: 2;
 	}
 }

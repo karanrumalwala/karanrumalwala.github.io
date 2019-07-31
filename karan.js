@@ -40,10 +40,10 @@ var items= document.getElementsByTagName('a');
 		if (isColor) 
 		{
 			document.body.style.background ="white";
-			document.body.style.color ="#6A601D";
+			document.body.style.color ="#CD853F";
 		    for (var i =0;i< items.length; i++){
-	 	    items[i].style.color="#6A601D";}
-	 	    bordr.style.borderColor="#6A601D";
+	 	    items[i].style.color="#CD853F";}
+	 	    bordr.style.borderColor="#CD853F";
 	 	    socialcolor0.className="lkiconfill";
 	 	    socialcolor1.className="lkiconfill";
 	 	    socialcolor2.className="lkiconfill";
@@ -65,3 +65,16 @@ var items= document.getElementsByTagName('a');
 		}
 
 }
+
+
+// var counter=function () {
+// 	var count =0;
+
+// 	var alerter= function(){
+// 		alert(++count);
+// 	}
+// 	return alerter;
+// }
+
+// var count1Fn= counter();
+// var count2Fn= counter();
