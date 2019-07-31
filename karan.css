@@ -16,7 +16,7 @@ body{
 
 .container{
 	display: grid;
-	grid-template-rows: min-content 70vh repeat(7, min-content);
+	grid-template-rows: min-content 80vh repeat(7, min-content);
 	grid-template-columns: [sidebar-start] minmax(min-content, 8rem) 
 	[sidebar-end full-start] 1fr [full-end email-start] 
 	minmax(min-content, 8rem) [email-end];
@@ -29,7 +29,7 @@ body{
 .navigation--list{
 	margin:0px 2rem;
 }
-.nav ,.hamburger_button{
+.nav{
 	display: flex;
 	justify-content: space-between;
 	grid-column: sidebar-start/email-end;
@@ -38,11 +38,8 @@ body{
 	align-items: center;
 	position: relative;
 	padding: 1.7rem;
-}
-.nav{
 	margin:auto 2rem;
 }
-
 .image_ali1{
 	transform:scale(2.5,2.5);
 	width: 4em;
@@ -194,7 +191,40 @@ h3{
 	flex-direction: column;
 	align-items: center;
 }
-
+.about{
+	grid-column-start: full-start;
+	grid-column-end: full-end;
+	display: flex;
+	padding: 3rem;
+	margin-top: 2rem;
+}
+.about__content{
+	font-size: 1.5rem;
+}
+.about .list{
+	margin: 2rem 0;
+	padding: 2rem 0;
+	display: flex;
+	flex-wrap: wrap;
+	list-style: none;
+	border-top: 1px solid #d6cab0;
+	border-bottom: 1px solid #d6cab0;
+	padding: 2rem;
+}
+.heading-4{
+	font-size: 4rem;
+	margin: 0;
+}
+.about .list_item{
+	flex-grow: 0;
+	flex-shrink:0;
+	flex-basis: 50%;
+	margin-bottom:2rem;
+}
+ 
+.about__content--text{
+	letter-spacing: 0.2rem;
+}
 /*Mobile*/
 @media only screen and (min-width: 375px) and (max-width: 700px){
 	html{
@@ -263,6 +293,21 @@ h3{
 	grid-column-start: sidebar-start;
 	grid-column-end: email-end;
 	}
+	.about{
+	grid-column: sidebar-start/email-end;
+	grid-column-start: sidebar-start;
+	grid-column-end: email-end;
+	margin: 3rem;
+	margin-top: 4rem;
+	}
+	.about__content{
+		font-size: 2rem;
+		font-family: 'Josefin Sans', serif;
+	}
+
+	h4{
+		font-size: 3rem;
+	}
 	h1{
 		font-size:4rem;
 	}
@@ -301,5 +346,10 @@ h3{
 		counter-increment: item 1;
 		color: #d6cab0;
 		line-height: 2;
+	}
+}
+@media only screen and (min-width: 701px){
+	.hamburger_button, .mobile{
+		display: none;
 	}
 }
