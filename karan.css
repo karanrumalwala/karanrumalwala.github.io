@@ -250,7 +250,7 @@ h3{
 		font-size: 50%;
 		}
 	.nav__box--logo{
-		font-size: 6rem;
+		font-size: 5rem;
 	}
 	.nav .hamburger_button{
 		display: flex;
@@ -301,7 +301,7 @@ h3{
 	display: none;
 	}
 	body{
-		line-height: 1.5;
+		line-height: 1;
 	}
 	.social_sidebar, .email{
 		display: none;
@@ -316,7 +316,7 @@ h3{
 	grid-column-start: sidebar-start;
 	grid-column-end: email-end;
 	margin: 3rem;
-	margin-top: 4rem;
+	margin-top: 5rem;
 	}
 	.about__content{
 		font-size: 2rem;
