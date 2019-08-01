@@ -40,10 +40,10 @@ var items= document.getElementsByTagName('a');
 		if (isColor) 
 		{
 			document.body.style.background ="white";
-			document.body.style.color ="#CD853F";
+			document.body.style.color ="#786722";
 		    for (var i =0;i< items.length; i++){
-	 	    items[i].style.color="#CD853F";}
-	 	    bordr.style.borderColor="#CD853F";
+	 	    items[i].style.color="#786722";}
+	 	    bordr.style.borderColor="#786722";
 	 	    socialcolor0.className="lkiconfill";
 	 	    socialcolor1.className="lkiconfill";
 	 	    socialcolor2.className="lkiconfill";
