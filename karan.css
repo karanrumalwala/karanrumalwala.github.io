@@ -29,6 +29,13 @@ body{
 	}
 .navigation--list{
 	margin:0px 2rem;
+	transition-timing-function: ease;
+	transition: 0.5s;
+}
+.navigation--list:hover{
+	margin:0px 2rem;
+	transform: scale(1.1) translate(0px,-10px);
+
 }
 .nav{
 	display: flex;
@@ -38,12 +45,13 @@ body{
 	grid-column-end: email-end;
 	align-items: center;
 	position: relative;
-	padding: 1.7rem;
+	padding: 1rem;
 	margin:auto 2rem;
 }
 .image_ali1{
 	transform:scale(2.5,2.5);
 	width: 4em;
+	cursor: pointer;
 }
 .image_ali,.image_ali1{
 	display: inline-flex;
@@ -73,7 +81,7 @@ body{
 	justify-content: center;
 	align-self: center;
 }
-.lkicon{
+.lkicon,.lkicon:hover{
 	display: flex;
 	align-items: center;
 	justify-content: center;
@@ -81,6 +89,12 @@ body{
 	height:30px;
 	margin: 20px;
 	fill: #d6cab0;
+	transition: 0.5s;
+	transition-timing-function: ease-in-out;
+}
+.lkicon:hover{
+	transform: scale(1.2) translate(0px,-8px);
+
 }
 .lkiconfill{
 	display: flex;
@@ -89,7 +103,7 @@ body{
 	width: 30px;
 	height:30px;
 	margin: 20px;
-	fill: #786722;
+	fill: #000000;
 }
 .lkiconfillc{
 	display: flex;
@@ -122,8 +136,13 @@ body{
   	align-items: center;
   	writing-mode: vertical-rl;
 }
-.e_s{
+.e_s,.e_s:hover{
 	font-size: 1rem;
+	transition: 0.5s;
+	transition-timing-function: ease;
+}
+.e_s:hover{
+	transform: scale(1.1) translate(0px,-5px);
 }
 .email_link{
 	color:#d6cab0;
@@ -153,7 +172,7 @@ body{
 	padding: 10px 20px 10px 20px;
 }
 .nav__box--logo{
-	font-size:4rem;
+	font-size:3rem;
 	font-family: 'PT Serif', serif;
 	-ms-flex-item-align:center;
 	margin-top:0px;
@@ -203,8 +222,8 @@ h3{
 	border:1px solid white;
 }
 .about .mainpic{
-	transform: translateX(-1rem)
-	translateY(-1rem);
+	transform: translateX(-.5rem)
+	translateY(-.5rem);
 	z-index: 1;
 }
 .about{
@@ -243,6 +262,7 @@ h3{
 .about__content--text{
 	letter-spacing: 0.1rem;
 }
+
 /*Mobile*/
 @media only screen and (min-width: 375px) and (max-width: 700px){
 	html{
@@ -316,16 +336,13 @@ h3{
 	grid-column-start: sidebar-start;
 	grid-column-end: email-end;
 	margin: 3rem;
-	margin-top: 5rem;
+	margin-top: 7rem;
 	}
 	.about__content{
 		font-size: 2rem;
 		font-family: 'Josefin Sans', serif;
 	}
 
-	h4{
-		font-size: 3rem;
-	}
 	h1{
 		font-size:4rem;
 	}
@@ -370,6 +387,7 @@ h3{
 	}
 	.about__content{
 		font-size: 1.5rem;
+		line-height: 1.7;
 	}
 	.photo .picture--item{
 		margin: 6vw;
@@ -377,6 +395,10 @@ h3{
 	.photo .mainpic{
 		width: 100%;
 		height: 100%;
+	}
+	.mb-md{
+		margin-bottom: 2rem;
+		font-size: 3.5rem;
 	}
 }
 @media only screen and (min-width: 701px){

@@ -40,10 +40,11 @@ var items= document.getElementsByTagName('a');
 		if (isColor) 
 		{
 			document.body.style.background ="white";
-			document.body.style.color ="#786722";
+			// document.body.style.color ="#786722";
+			document.body.style.color ="#000000";
 		    for (var i =0;i< items.length; i++){
-	 	    items[i].style.color="#786722";}
-	 	    bordr.style.borderColor="#786722";
+	 	    items[i].style.color="#000000";}
+	 	    bordr.style.borderColor="#000000";
 	 	    socialcolor0.className="lkiconfill";
 	 	    socialcolor1.className="lkiconfill";
 	 	    socialcolor2.className="lkiconfill";
@@ -73,17 +74,6 @@ var items= document.getElementsByTagName('a');
 	});
 	sideNav.addEventListener("click",function(){
 		sideNav.classList.remove('open');
-	})
+	});
 
-
-// var counter=function () {
-// 	var count =0;
-
-// 	var alerter= function(){
-// 		alert(++count);
-// 	}
-// 	return alerter;
-// }
-
-// var count1Fn= counter();
-// var count2Fn= counter();
+	
